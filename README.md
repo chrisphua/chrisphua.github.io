@@ -1,4 +1,4 @@
-# chrisphua.github.io
+# chrisphua.github.io (Website)
 
 ## Build Setup
 
