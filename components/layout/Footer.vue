@@ -9,7 +9,8 @@
         <div class="flex items-center -mx-2">
           <a
             class="flex items-center mx-2 text-gray-600 hover:text-indigo-600"
-            href="#"
+            href="https://www.linkedin.com/in/chris-phua/"
+            target="_blank"
           >
             <svg
               class="h-5 w-5 sm:h-5 sm:w-5 fill-current"
@@ -24,7 +25,8 @@
 
           <a
             class="flex items-center mx-2 text-gray-600 hover:text-indigo-600"
-            href="#"
+            href="https://github.com/chrisphua"
+            target="_blank"
           >
             <svg
               class="h-6 w-6 sm:h-6 sm:w-6 fill-current"
