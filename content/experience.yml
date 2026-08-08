@@ -1,0 +1,22 @@
+items:
+  - role: Senior Software Engineer
+    company: Bunkerchain Pte Ltd
+    period: 2022 - Present
+    description: >
+      Working across the full stack, from frontend to backend. Fulfilling.
+    tags:
+      - AWS
+      - Spring Boot
+      - Vue
+      - Flutter
+      - Swift
+      - Android
+      - Claude Code
+  - role: Web Developer
+    company: PixelSquad Pte Ltd
+    period: 2020 - 2022
+    description: >
+      Built multiple projects using Laravel and Vue.js.
+    tags:
+      - Laravel
+      - Vue.js

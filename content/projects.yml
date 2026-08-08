@@ -1,0 +1,29 @@
+items:
+  - title: BIOSNFT
+    description: >
+      Minted and sold 1,024 NFTs on the OpenSea marketplace. The project includes a website where users can preview their purchased NFTs. Each NFT features a plant that grows and evolves over time.
+    image: https://premium-tailwindcomponents.netlify.app/assets/svg/tailwindcomponent-dark.svg
+    link: https://github.com/chrisphua
+    tags:
+      - NFT
+      - OpenSea
+      - Web
+  - title: MyPlaylist
+    description: >
+      An iOS app for importing music from iCloud Drive. Fully offline-capable.
+    image: https://premium-tailwindcomponents.netlify.app/assets/svg/tailwindcomponent-dark.svg
+    link: https://github.com/chrisphua
+    tags:
+      - iOS
+      - Music
+      - Offline
+  - title: MyDownloader
+    description: >
+      A desktop app for Mac and Windows that downloads content to your local computer.
+    image: https://premium-tailwindcomponents.netlify.app/assets/svg/tailwindcomponent-dark.svg
+    link: https://github.com/chrisphua
+    tags:
+      - Desktop
+      - Mac
+      - Windows
+      - Downloader
