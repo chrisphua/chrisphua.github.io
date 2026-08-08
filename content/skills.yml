@@ -1,0 +1,26 @@
+categories:
+  - title: Languages
+    items:
+      - Java
+      - JavaScript
+      - HTML
+      - CSS
+  - title: Frameworks
+    items:
+      - Vue.js
+      - Nuxt.js
+      - Laravel
+      - Spring Boot
+      - Flutter
+  - title: Cloud / DevOps
+    items:
+      - AWS
+      - Google Cloud
+  - title: Tools
+    items:
+      - VS Code
+      - IntelliJ IDEA
+      - GitHub
+      - Database
+      - Claude Code
+      - HuggingFace

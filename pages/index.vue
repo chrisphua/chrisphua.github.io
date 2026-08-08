@@ -1,403 +1,213 @@
 <template>
-  <div>
-    <section class="bg-white mt-20">
-      <div class="max-w-2xl px-6 text-center mx-auto">
-        <h2 class="text-3xl font-semibold text-gray-800">
-          Hi,
-          <span class="bg-indigo-600 text-white rounded px-1"
-            >I’m Chris Phua</span
-          >
-          . Nice to meet you.
-        </h2>
-        <p class="text-gray-600 mt-4">
-          I'm a
-          <span class="bg-indigo-600 text-white rounded px-1"
-            >software developer</span
-          >
-          and an
-          <span class="bg-indigo-600 text-white rounded px-1"
-            >entrepreneur</span
-          >
-          aims to
-          <span
-            class="bg-indigo-600 text-white rounded px-1 text-2xl font-semibold"
-            >transform all businesses to meet demanding growth</span
-          >. I'm
-          <span class="bg-indigo-600 text-white rounded px-1"
-            >AWS certified</span
-          >
-          and years of software development. I follow best practices and latest
-          best software stacks to ensure long term servicing and reliability.
-        </p>
-
-        <div class="flex items-end justify-center mt-16">
-          <img class="h-40 rounded-full" src="chrisphua.jpeg" />
+  <div class="font-mono text-terminal-text antialiased bg-terminal-bg min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+      <header class="border-b border-terminal-border pb-4 mb-8">
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="text-terminal-green">➜</span>
+            <span class="text-terminal-text ml-2">~</span>
+            <span class="text-terminal-cyan ml-2">portfolio</span>
+          </div>
+          <div class="flex items-center space-x-4 text-xs">
+            <a href="https://github.com/chrisphua" target="_blank" rel="noopener" class="text-terminal-muted hover:text-terminal-text transition">
+              <span class="text-terminal-green">gh</span>/chrisphua
+            </a>
+            <a href="https://www.linkedin.com/in/chris-phua/" target="_blank" rel="noopener" class="text-terminal-muted hover:text-terminal-text transition">
+              <span class="text-terminal-cyan">li</span>/chris-phua
+            </a>
+            <span class="text-terminal-muted">|</span>
+            <span class="text-terminal-muted"><span class="text-terminal-amber">[SPACE]</span> jump</span>
+          </div>
         </div>
-      </div>
-    </section>
+      </header>
 
-    <section class="bg-gray-800 pattern py-20">
-      <div class="max-w-5xl px-6 mx-auto text-center">
-        <h2 class="text-2xl font-semibold text-white">About Me</h2>
-
-        <p class="text-gray-400 mt-4">
-          Programming has always intrigued me since I was at a young age. The
-          young me had always wondered how a simple button could be so
-          interactive and animated. Now that I know how to create a button but
-          it comes back with more questions :,D I still love programming. And if
-          you wish to hire me or work with a curious creature like me, please
-          don’t hesitate to talk to
-          <a
-            class="underline"
-            target="_blank"
-            href="https://www.linkedin.com/in/chris-phua/"
-            >me</a
-          >.
-        </p>
-      </div>
-    </section>
-
-    <section class="bg-white py-20">
-      <div class="max-w-5xl px-6 mx-auto text-center">
-        <h2 class="text-2xl font-semibold text-gray-800">Latest Posts</h2>
-
-        <p class="mt-8">Coming soon...</p>
-
-        <!-- <div class="flex flex-col items-center justify-center mt-6">
-          <a
-            class="
-              max-w-2xl
-              w-full
-              block
-              bg-white
-              shadow-md
-              rounded-md
-              border-t-4 border-indigo-600
-              transition
-              duration-500
-              ease-in-out
-              transform
-              hover:-translate-y-1 hover:scale-110
-            "
-            href="#"
-          >
-            <div class="flex items-center justify-between px-4 py-2">
-              <h3 class="text-lg font-medium text-gray-700">
-                Easy, Free Laravel CI Using GitHub Actions
-              </h3>
-              <span class="block text-gray-600 font-light text-sm"
-                >20 Jan 2020</span
-              >
-            </div>
-          </a>
-
-          <a
-            class="
-              mt-8
-              max-w-2xl
-              w-full
-              block
-              bg-white
-              shadow-md
-              rounded-md
-              border-t-4 border-indigo-600
-              transition
-              duration-500
-              ease-in-out
-              transform
-              hover:-translate-y-1 hover:scale-110
-            "
-            href="#"
-          >
-            <div class="flex items-center justify-between px-4 py-2">
-              <h3 class="text-lg font-medium text-gray-700">
-                Pest: a delightful PHP Testing Framework
-              </h3>
-              <span class="block text-gray-600 font-light text-sm"
-                >29 Oct 2019</span
-              >
-            </div>
-          </a>
-
-          <a
-            class="
-              mt-8
-              max-w-2xl
-              w-full
-              block
-              bg-white
-              shadow-md
-              rounded-md
-              border-t-4 border-indigo-600
-              transition
-              duration-500
-              ease-in-out
-              transform
-              hover:-translate-y-1 hover:scale-110
-            "
-            href="#"
-          >
-            <div class="flex items-center justify-between px-4 py-2">
-              <h3 class="text-lg font-medium text-gray-700">
-                Using inline SVGs in Vue components
-              </h3>
-              <span class="block text-gray-600 font-light text-sm"
-                >15 Oct 2019</span
-              >
-            </div>
-          </a>
-
-          <a
-            class="
-              mt-8
-              max-w-2xl
-              w-full
-              block
-              bg-white
-              shadow-md
-              rounded-md
-              border-t-4 border-indigo-600
-              transition
-              duration-500
-              ease-in-out
-              transform
-              hover:-translate-y-1 hover:scale-110
-            "
-            href="#"
-          >
-            <div class="flex items-center justify-between px-4 py-2">
-              <h3 class="text-lg font-medium text-gray-700">
-                Acceptance Testing Laravel & VueJs Apps with Codeception
-              </h3>
-              <span class="block text-gray-600 font-light text-sm"
-                >3 Oct 2019</span
-              >
-            </div>
-          </a>
-        </div> -->
-
-        <!-- <div class="flex items-center justify-center mt-12">
-          <a
-            class="
-              flex
-              items-center
-              text-gray-600
-              hover:underline hover:text-gray-500
-            "
-            href="#"
-          >
-            <span>View More</span>
-
-            <svg
-              class="h-5 w-5 ml-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+      <main>
+        <section class="mb-12">
+          <div class="text-terminal-muted text-sm mb-2">$ whoami</div>
+          <h1 class="text-2xl md:text-3xl font-bold text-terminal-text mb-2">{{ profile.name }}</h1>
+          <p class="text-terminal-amber mb-4">{{ profile.title }}</p>
+          <div class="w-full mb-6">
+            <PixelCharacter />
+          </div>
+          <p class="text-terminal-muted leading-relaxed max-w-2xl mb-6">
+            {{ profile.bio }}
+          </p>
+          <div class="flex items-center space-x-4">
+            <a
+              href="https://github.com/chrisphua"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center px-4 py-2 bg-terminal-surface border border-terminal-border text-terminal-green hover:border-terminal-green transition text-sm"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </a>
-        </div> -->
-      </div>
-    </section>
+              $ gh profile
+            </a>
+            <a
+              href="https://www.linkedin.com/in/chris-phua/"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center px-4 py-2 bg-terminal-surface border border-terminal-border text-terminal-cyan hover:border-terminal-cyan transition text-sm"
+            >
+              $ li profile
+            </a>
+          </div>
+        </section>
 
-    <section class="bg-gray-800 pattern py-20">
-      <div class="max-w-5xl px-6 mx-auto text-center">
-        <h2 class="text-2xl font-semibold text-white">Projects</h2>
-
-        <p class="mt-8 text-white">Coming soon...</p>
-
-        <!-- <div class="flex items-center justify-center mt-10">
-          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="max-w-xs w-full">
-              <div
-                class="
-                  flex
-                  items-center
-                  justify-center
-                  h-56
-                  bg-white
-                  border-b-8 border-teal-400
-                  rounded-md
-                  overflow-hidden
-                "
-              >
-                <img
-                  class="object-cover h-8"
-                  src="https://premium-tailwindcomponents.netlify.app/assets/svg/tailwindcomponent-dark.svg"
-                  alt=""
-                />
+        <section class="mb-12">
+          <div class="text-terminal-muted text-sm mb-4">$ cat skills.txt</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div v-for="category in skills.categories" :key="category.title">
+              <h3 class="text-terminal-amber text-sm font-semibold mb-2">{{ category.title }}:</h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  v-for="skill in category.items"
+                  :key="skill"
+                  class="text-terminal-text text-sm"
+                >
+                  {{ skill }}<span class="text-terminal-border">;</span>
+                </span>
               </div>
-
-              <a
-                href="#"
-                class="
-                  block
-                  bg-gray-700
-                  mt-5
-                  rounded-md
-                  overflow-hidden
-                  transition
-                  duration-500
-                  ease-in-out
-                  transform
-                  hover:-translate-y-1 hover:scale-110
-                "
-              >
-                <div class="py-2 px-3 text-center text-sm">
-                  <p class="text-gray-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-
-                  <span class="block text-gray-500 mt-2"
-                    >tailwindcomponents.com</span
-                  >
-                </div>
-              </a>
-            </div>
-
-            <div class="max-w-xs w-full">
-              <div
-                class="
-                  flex
-                  items-center
-                  justify-center
-                  h-56
-                  bg-white
-                  border-b-8 border-teal-400
-                  rounded-md
-                  overflow-hidden
-                "
-              >
-                <img
-                  class="object-cover h-8"
-                  src="https://premium-tailwindcomponents.netlify.app/assets/svg/tailwindcomponent-dark.svg"
-                  alt=""
-                />
-              </div>
-
-              <a
-                href="#"
-                class="
-                  block
-                  bg-gray-700
-                  mt-5
-                  rounded-md
-                  overflow-hidden
-                  transition
-                  duration-500
-                  ease-in-out
-                  transform
-                  hover:-translate-y-1 hover:scale-110
-                "
-              >
-                <div class="py-2 px-3 text-center text-sm">
-                  <p class="text-gray-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-
-                  <span class="block text-gray-500 mt-2"
-                    >tailwindcomponents.com</span
-                  >
-                </div>
-              </a>
-            </div>
-
-            <div class="max-w-xs w-full">
-              <div
-                class="
-                  flex
-                  items-center
-                  justify-center
-                  h-56
-                  bg-white
-                  border-b-8 border-teal-400
-                  rounded-md
-                  overflow-hidden
-                "
-              >
-                <img
-                  class="object-cover h-8"
-                  src="https://premium-tailwindcomponents.netlify.app/assets/svg/tailwindcomponent-dark.svg"
-                  alt=""
-                />
-              </div>
-
-              <a
-                href="#"
-                class="
-                  block
-                  bg-gray-700
-                  mt-5
-                  rounded-md
-                  overflow-hidden
-                  transition
-                  duration-500
-                  ease-in-out
-                  transform
-                  hover:-translate-y-1 hover:scale-110
-                "
-              >
-                <div class="py-2 px-3 text-center text-sm">
-                  <p class="text-gray-300">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-
-                  <span class="block text-gray-500 mt-2"
-                    >tailwindcomponents.com</span
-                  >
-                </div>
-              </a>
             </div>
           </div>
-        </div> -->
+        </section>
 
-        <!-- <div class="flex items-center justify-center mt-12">
+        <section class="mb-12">
+          <div class="text-terminal-muted text-sm mb-4">$ cat experience.log</div>
+          <div class="space-y-6">
+            <div v-for="item in experience.items" :key="item.role + item.company" class="border-l-2 border-terminal-border pl-4">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <h3 class="text-terminal-text font-semibold">{{ item.role }}</h3>
+                <span class="text-terminal-green text-sm">{{ item.period }}</span>
+              </div>
+              <p class="text-terminal-amber text-sm mt-1">{{ item.company }}</p>
+              <p class="text-terminal-muted mt-2 text-sm leading-relaxed">{{ item.description }}</p>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span v-for="tag in item.tags" :key="tag" class="text-xs text-terminal-muted">
+                  [{{ tag }}]
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-12">
+          <div class="text-terminal-muted text-sm mb-4">$ cat education.log</div>
+          <div class="space-y-6">
+            <div v-for="item in education.items" :key="item.school" class="border-l-2 border-terminal-border pl-4">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <h3 class="text-terminal-text font-semibold">{{ item.school }}</h3>
+                <span class="text-terminal-green text-sm">{{ item.period }}</span>
+              </div>
+              <p class="text-terminal-amber text-sm mt-1">{{ item.degree }} — {{ item.field }}</p>
+              <p class="text-terminal-muted mt-2 text-sm leading-relaxed">{{ item.description }}</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-12">
+          <div class="text-terminal-muted text-sm mb-4">$ ls projects/</div>
+          <div class="space-y-4">
+            <div v-for="project in projects.items" :key="project.title" class="border border-terminal-border p-4 hover:border-terminal-green transition">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                <div class="flex-1">
+                  <h3 class="text-terminal-text font-semibold">{{ project.title }}</h3>
+                  <p class="text-terminal-muted mt-1 text-sm">{{ project.description }}</p>
+                  <div class="flex flex-wrap gap-2 mt-2">
+                    <span v-for="tag in project.tags" :key="tag" class="text-xs text-terminal-muted">
+                      [{{ tag }}]
+                    </span>
+                  </div>
+                </div>
+                <a
+                  :href="project.link"
+                  target="_blank"
+                  rel="noopener"
+                  class="inline-flex items-center text-sm text-terminal-cyan hover:text-terminal-green whitespace-nowrap"
+                >
+                  $ cat {{ project.title.toLowerCase() }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-12">
+          <div class="text-terminal-muted text-sm mb-4">$ contact --method linkedin</div>
+          <p class="text-terminal-muted text-sm mb-4">Feel free to reach out on LinkedIn.</p>
           <a
-            class="
-              flex
-              items-center
-              text-white
-              hover:underline hover:text-gray-200
-            "
-            href="#"
+            href="https://www.linkedin.com/in/chris-phua/"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center px-4 py-2 bg-terminal-surface border border-terminal-border text-terminal-cyan hover:border-terminal-cyan transition text-sm"
           >
-            <span>View More On Github</span>
-
-            <svg
-              class="h-5 w-5 ml-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
+            $ li message
           </a>
-        </div> -->
-      </div>
-    </section>
+        </section>
+      </main>
+
+      <footer class="border-t border-terminal-border pt-4 mt-8">
+        <div class="text-terminal-muted text-xs">
+          <span class="text-terminal-green">➜</span> <span class="text-terminal-text">~</span> <span class="text-terminal-cyan">portfolio</span> <span class="text-terminal-muted">$</span> <span class="animate-pulse">_</span>
+        </div>
+      </footer>
+    </div>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
+import PixelCharacter from '~/components/PixelCharacter.vue'
 
-export default Vue.extend({})
+export default {
+  components: {
+    PixelCharacter
+  },
+  async asyncData({ $content }) {
+    const profile = await $content('profile').fetch()
+    const skills = await $content('skills').fetch()
+    const experience = await $content('experience').fetch()
+    const education = await $content('education').fetch()
+    const projects = await $content('projects').fetch()
+
+    return {
+      profile,
+      skills,
+      experience,
+      education,
+      projects
+    }
+  },
+  head() {
+    return {
+      title: `${this.profile.name} - ${this.profile.title}`,
+      bodyAttrs: {
+        class: 'bg-terminal-bg text-terminal-text'
+      }
+    }
+  }
+}
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS */
-/* .container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-} */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+::selection {
+  background-color: #4ADE80;
+  color: #0C0C0C;
+}
+
+a {
+  text-decoration: none;
+}
+
+.animate-pulse {
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 </style>
