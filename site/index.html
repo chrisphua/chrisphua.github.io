@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work in progress</title>
+<meta name="description" content="Life, always a work in progress.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='12' width='26' height='8' rx='4' fill='none' stroke='%23d97a3a' stroke-width='2.5'/%3E%3Crect x='6' y='15' width='14' height='2' rx='1' fill='%23d97a3a'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #f6f2ea;
+    --text: #23201b;
+    --muted: #7a7266;
+    --track: #e4ddd0;
+    --accent: #d97a3a;
+    --line: #ddd5c6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15130f;
+      --text: #ece6da;
+      --muted: #8f877a;
+      --track: #2a2620;
+      --accent: #e8914f;
+      --line: #2c2822;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); }
+  body {
+    font: 18px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex: 1;
+    width: 100%;
+    max-width: 36rem;
+    margin: 0 auto;
+    padding: 18vh 16px 4rem;
+  }
+  h1 {
+    margin: 0 0 2.2rem;
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: clamp(2.1rem, 7vw, 3.2rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  h1 em { color: var(--accent); }
+
+  .progress { margin: 0 0 4.5rem; }
+  .bar {
+    height: 6px;
+    border-radius: 3px;
+    background: var(--track);
+    overflow: hidden;
+  }
+  .fill {
+    height: 100%;
+    width: 61%;
+    border-radius: 3px;
+    background: var(--accent);
+    transition: width 1.2s ease;
+  }
+  .status {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.6rem;
+    font: 14px/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    color: var(--muted);
+  }
+
+  h2 {
+    margin: 0 0 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  li { border-bottom: 1px solid var(--line); }
+  li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    color: var(--text);
+    text-decoration: none;
+  }
+  li a span { color: var(--muted); font-size: 0.9rem; text-align: right; }
+  li a:hover strong { color: var(--accent); }
+
+  footer {
+    max-width: 36rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 16px 3rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Life, always a<br><em>work in progress</em>.</h1>
+
+  <div class="progress" aria-label="Progress: never quite finished">
+    <div class="bar"><div class="fill" id="fill"></div></div>
+    <div class="status"><span id="what">still learning</span><span id="pct">61%</span></div>
+  </div>
+
+  <h2>Currently making</h2>
+  <ul>
+    <li><a href="/apps/Ganymede/"><strong>Ganymede Synth</strong><span>a synthesizer you learn by playing</span></a></li>
+    <li><a href="/apps/MyNote/"><strong>MyNote</strong><span>notes, with no account</span></a></li>
+    <li><a href="/apps/MyPlaylist/"><strong>MyPlaylist</strong><span>an offline music player</span></a></li>
+    <li><a href="/apps/MyDownloader/"><strong>MyDownloader</strong><span>video and audio, for Mac and Windows</span></a></li>
+  </ul>
+</main>
+
+<footer>Made slowly. Never finished.</footer>
+
+<script>
+  /* The bar creeps toward 100 and never gets there: every so often it slips back a
+   * little, because something needed redoing. */
+  (function () {
+    var fill = document.getElementById('fill');
+    var pct = document.getElementById('pct');
+    var what = document.getElementById('what');
+    var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var doing = ['still learning', 'trying again', 'refactoring', 'making mistakes',
+                 'starting over', 'getting there', 'fixing one more thing'];
+    var p = 61;
+    function show() {
+      fill.style.width = p.toFixed(1) + '%';
+      pct.textContent = Math.floor(p) + '%';
+    }
+    if (still) { show(); return; }
+    setInterval(function () {
+      if (p > 88 && Math.random() < 0.35) {
+        p -= 8 + Math.random() * 14;
+        what.textContent = doing[Math.floor(Math.random() * doing.length)];
+      } else {
+        p += (99 - p) * (0.04 + Math.random() * 0.05);
+      }
+      show();
+    }, 1600);
+  })();
+</script>
+</body>
+</html>
