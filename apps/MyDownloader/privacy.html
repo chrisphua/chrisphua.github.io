@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — MyDownloader</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #0d0d0d; --text: #f0f0f0; --muted: #888; --border: #2a2a2a; --accent: #22aa77; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; border-bottom: 1px solid var(--border); }
+    nav .logo { font-weight: 700; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+    .container { max-width: 760px; margin: 0 auto; padding: 56px 24px 96px; }
+    h1 { font-size: 2rem; margin-bottom: 6px; }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 40px; }
+    h2 { font-size: 1.1rem; margin: 32px 0 10px; }
+    p, li { color: #c8c8c8; font-size: 0.97rem; margin-bottom: 10px; }
+    ul { padding-left: 22px; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+<nav><span class="logo">MyDownloader</span><a href="./">← Back</a></nav>
+<div class="container">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 24 October 2026</p>
+
+  <p>MyDownloader is a desktop app for macOS and Windows made by Chris Phua. In short: it
+  collects nothing about you, and there is no server of ours for anything to go to.</p>
+
+  <h2>What MyDownloader collects</h2>
+  <p><strong>Nothing.</strong> There is no account, no sign-in, no analytics, no crash
+  reporting, no advertising and no tracking of any kind. No identifier is assigned to you,
+  and nothing about how you use the app is recorded or sent anywhere.</p>
+
+  <h2>What the app connects to</h2>
+  <p>MyDownloader runs entirely on your computer. It makes only these connections:</p>
+  <ul>
+    <li><strong>The site of the link you paste.</strong> To download a video or its audio,
+    the bundled downloader (yt-dlp) connects directly from your computer to that site —
+    YouTube, TikTok, Instagram and so on. That site sees the request as it would from your
+    browser, under its own privacy policy.</li>
+    <li><strong>yt-dlp updates.</strong> When the app starts, and when you choose
+    <em>Check for updates</em>, it asks yt-dlp's own release page on GitHub for a newer
+    version of the downloader, so that sites that change still work. GitHub's privacy
+    policy applies to that request.</li>
+  </ul>
+  <p>None of these connections pass through us.</p>
+
+  <h2>What stays on your computer</h2>
+  <p>The files you download are saved where you choose in the Save dialog. The app also
+  keeps its updated copy of yt-dlp in its own application-data folder. Nothing else is
+  stored, and uninstalling the app removes it.</p>
+
+  <h2>Children</h2>
+  <p>MyDownloader collects no personal information from anyone, including children under 13.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy ever changes, the new version will be posted here with a new date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: <a href="https://github.com/chrisphua/chrisphua.github.io/issues">open an issue</a>.</p>
+</div>
+</body>
+</html>
