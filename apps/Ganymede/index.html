@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ganymede Synth — a synthesizer you learn by playing</title>
+<meta name="description" content="Ganymede Synth is a polyphonic synthesizer for iPad, Mac, and Android phones and tablets, made for people who have never touched a synth. Pick a sound, turn a knob, hear it. No account, no ads, no data collected.">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ganymede Synth">
+<meta property="og:description" content="A synthesizer you learn by playing. For iPad, Mac, and Android phones and tablets.">
+<meta property="og:url" content="https://chrisphua.github.io/apps/Ganymede/">
+<meta property="og:image" content="https://chrisphua.github.io/apps/Ganymede/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root {
+    --sky: #17112a;
+    --sky-2: #221a3b;
+    --card: rgba(255, 255, 255, 0.05);
+    --edge: rgba(255, 255, 255, 0.1);
+    --text: #f4efe4;
+    --muted: #b9b2c9;
+    --red: #d9533f;
+    --orange: #ef8a3a;
+    --gold: #f2b544;
+    --cream: #efe3c2;
+    --blue: #a9bccf;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--sky); }
+  body {
+    margin: 0;
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    color: var(--text);
+    background:
+      radial-gradient(1px 1px at 12% 18%, #fff8 50%, transparent 51%),
+      radial-gradient(1px 1px at 78% 9%, #fff6 50%, transparent 51%),
+      radial-gradient(1px 1px at 64% 32%, #fff5 50%, transparent 51%),
+      radial-gradient(1px 1px at 30% 44%, #fff4 50%, transparent 51%),
+      radial-gradient(1px 1px at 90% 52%, #fff6 50%, transparent 51%),
+      radial-gradient(1px 1px at 8% 70%, #fff5 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 50% 12%, #fff9 50%, transparent 51%),
+      linear-gradient(180deg, var(--sky) 0%, var(--sky-2) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  a { color: var(--gold); }
+  .wrap { max-width: 60rem; margin: 0 auto; padding: 0 16px; }
+
+  header.hero {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    padding: 5rem 0 3.5rem;
+  }
+  .hero img {
+    width: 168px; height: 168px;
+    border-radius: 38px;
+    box-shadow: 0 20px 60px rgba(239, 138, 58, 0.25), 0 0 0 1px var(--edge);
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    letter-spacing: 0.06em;
+    line-height: 1.05;
+    font-weight: 800;
+  }
+  h1 span { color: var(--gold); font-weight: 600; letter-spacing: 0.02em; }
+  .tagline { font-size: 1.3rem; color: var(--orange); margin: 0.6rem 0 0; }
+  .platforms { color: var(--muted); margin: 0.3rem 0 1.4rem; }
+  .soon {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--edge);
+    background: var(--card);
+    font-size: 0.95rem;
+  }
+  .soon::before {
+    content: ""; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--gold); box-shadow: 0 0 10px var(--gold);
+  }
+
+  .stripes { display: flex; height: 6px; border-radius: 3px; overflow: hidden; margin: 0 0 3.5rem; }
+  .stripes i { flex: 1; }
+
+  h2 { font-size: 1.05rem; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 1rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--edge);
+    border-radius: 16px;
+    padding: 1.4rem 1.4rem 1.2rem;
+  }
+  .card h2 { border-left: 4px solid; padding-left: 0.6rem; }
+  .card ul { margin: 0; padding-left: 1.1rem; color: var(--muted); }
+  .card li { margin-bottom: 0.45rem; }
+  .card li strong { color: var(--text); font-weight: 600; }
+
+  .private {
+    margin: 3rem 0 0;
+    padding: 1.6rem;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(169, 188, 207, 0.12), rgba(239, 227, 194, 0.06));
+    border: 1px solid var(--edge);
+  }
+  .private h2 { color: var(--blue); }
+  .private p { margin: 0; color: var(--muted); }
+
+  footer {
+    margin: 4rem 0 0;
+    padding: 1.6rem 0 3rem;
+    border-top: 1px solid var(--edge);
+    display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem;
+    color: var(--muted); font-size: 0.95rem;
+  }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--text); }
+
+  @media (max-width: 640px) {
+    header.hero { grid-template-columns: 1fr; text-align: center; gap: 1.5rem; padding-top: 3rem; }
+    .hero img { width: 128px; height: 128px; border-radius: 29px; margin: 0 auto; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <img src="icon.png" alt="The Ganymede app icon: a striped planet with a small moon">
+  <div>
+    <h1>GANYMEDE <span>Synth</span></h1>
+    <p class="tagline">A synthesizer you learn by playing.</p>
+    <p class="platforms">iPad · Mac · Android phones and tablets</p>
+    <div class="soon">Coming soon to the App Store and Google Play</div>
+  </div>
+</header>
+
+<div class="stripes" aria-hidden="true">
+  <i style="background:var(--red)"></i><i style="background:var(--orange)"></i><i style="background:var(--gold)"></i><i style="background:var(--cream)"></i><i style="background:var(--blue)"></i>
+</div>
+
+<main class="grid">
+  <section class="card">
+    <h2 style="border-color:var(--orange)">Start in seconds</h2>
+    <ul>
+      <li><strong>Sixteen ready-made sounds</strong> — brass, strings, pads, leads, basses, keys and bells.</li>
+      <li><strong>Eight big knobs with plain names:</strong> Brightness, Bite, Sweep, Fade in, Fade out, Thickness, Space, Echo.</li>
+      <li><strong>See what you hear</strong> — live pictures of the volume and the filter as you turn.</li>
+      <li><strong>Surprise me</strong> rolls a brand-new sound that always stays playable.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2 style="border-color:var(--gold)">Go deeper</h2>
+    <ul>
+      <li><strong>The full panel:</strong> two oscillators with sync and cross-mod, a resonant filter, two envelopes and an LFO.</li>
+      <li><strong>Two sounds at once</strong> — layered on every key, or split across the keyboard.</li>
+      <li><strong>Arpeggio and a 16-step sequencer</strong>, with swing and tap tempo.</li>
+      <li><strong>Chorus, delay and reverb.</strong></li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2 style="border-color:var(--blue)">Play it your way</h2>
+    <ul>
+      <li><strong>Any USB MIDI keyboard</strong> — with built-in support for the Akai MPK mini IV.</li>
+      <li><strong>On iPad and Mac, keeps playing in the background.</strong></li>
+      <li><strong>Unlock</strong>, one purchase: <strong>save</strong> your own sounds, <strong>record</strong> what you play to a 24-bit WAV, and send <strong>MIDI out</strong> to other synths or your DAW.</li>
+    </ul>
+  </section>
+</main>
+
+<section class="private">
+  <h2>Private by design</h2>
+  <p>No account, no ads, no tracking. Ganymede collects nothing, and goes online only when you
+  buy or restore the Unlock. <a href="privacy.html">Read the privacy policy</a>.</p>
+</section>
+
+<footer>
+  <span>© 2026 Ganymede Synth</span>
+  <a href="support.html">Support</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="../">More apps</a>
+</footer>
+
+</div>
+</body>
+</html>
