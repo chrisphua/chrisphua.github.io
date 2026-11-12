@@ -118,6 +118,26 @@
   }
   .beta .btn.ghost { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
 
+  .gallery { margin: 0 0 3rem; }
+  .gallery h3 {
+    font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted); margin: 1.8rem 0 0.8rem;
+  }
+  .strip {
+    display: flex; gap: 0.9rem; overflow-x: auto; scroll-snap-type: x mandatory;
+    padding: 0 0 0.8rem; -webkit-overflow-scrolling: touch;
+  }
+  .strip a { flex: none; scroll-snap-align: start; }
+  .strip img {
+    display: block; height: 300px; width: auto; border-radius: 12px;
+    border: 1px solid var(--edge); background: var(--card);
+  }
+  .strip.phone img { height: 420px; }
+  @media (max-width: 600px) {
+    .strip img { height: 210px; }
+    .strip.phone img { height: 360px; }
+  }
+
   .private {
     margin: 3rem 0 0;
     padding: 1.6rem;
@@ -178,6 +198,32 @@
     <a class="btn" href="https://groups.google.com/g/my-beloved-app-tester">1 · Join the group</a>
     <a class="btn" href="https://play.google.com/apps/testing/com.chrisphua.ganymede">2 · Join the beta</a>
     <a class="btn ghost" href="https://play.google.com/store/apps/details?id=com.chrisphua.ganymede">3 · Install from Google Play</a>
+  </div>
+</section>
+
+<section class="gallery" aria-label="Screenshots">
+  <h2>What you get</h2>
+  <h3>iPad and Android tablets</h3>
+  <div class="strip">
+    <a href="shots/tablet-1_easy.jpg"><img src="shots/tablet-1_easy.jpg" alt="Easy view: pick one of sixteen sounds and turn eight plain-named knobs" loading="lazy"></a>
+    <a href="shots/tablet-2_split.jpg"><img src="shots/tablet-2_split.jpg" alt="Two sounds at once: layered, or split across the keyboard" loading="lazy"></a>
+    <a href="shots/tablet-3_panel.jpg"><img src="shots/tablet-3_panel.jpg" alt="The full panel: oscillators, filter, envelopes, LFO and effects" loading="lazy"></a>
+    <a href="shots/tablet-4_seq.jpg"><img src="shots/tablet-4_seq.jpg" alt="The arpeggio and the 16-step sequencer" loading="lazy"></a>
+    <a href="shots/tablet-5_light.jpg"><img src="shots/tablet-5_light.jpg" alt="A light theme, played from a USB MIDI keyboard" loading="lazy"></a>
+  </div>
+  <h3>iPhone</h3>
+  <div class="strip phone">
+    <a href="shots/iphone-1_easy.jpg"><img src="shots/iphone-1_easy.jpg" alt="Easy view: pick one of sixteen sounds and turn eight plain-named knobs" loading="lazy"></a>
+    <a href="shots/iphone-2_split.jpg"><img src="shots/iphone-2_split.jpg" alt="Two sounds at once: layered, or split across the keyboard" loading="lazy"></a>
+    <a href="shots/iphone-3_panel.jpg"><img src="shots/iphone-3_panel.jpg" alt="The full panel: oscillators, filter, envelopes, LFO and effects" loading="lazy"></a>
+    <a href="shots/iphone-5_light.jpg"><img src="shots/iphone-5_light.jpg" alt="A light theme, played from a USB MIDI keyboard" loading="lazy"></a>
+  </div>
+  <h3>Android phones</h3>
+  <div class="strip phone">
+    <a href="shots/android-1_easy.jpg"><img src="shots/android-1_easy.jpg" alt="Easy view: pick one of sixteen sounds and turn eight plain-named knobs" loading="lazy"></a>
+    <a href="shots/android-2_split.jpg"><img src="shots/android-2_split.jpg" alt="Two sounds at once: layered, or split across the keyboard" loading="lazy"></a>
+    <a href="shots/android-3_panel.jpg"><img src="shots/android-3_panel.jpg" alt="The full panel: oscillators, filter, envelopes, LFO and effects" loading="lazy"></a>
+    <a href="shots/android-5_light.jpg"><img src="shots/android-5_light.jpg" alt="A light theme, played from a USB MIDI keyboard" loading="lazy"></a>
   </div>
 </section>
 
