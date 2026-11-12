@@ -99,6 +99,25 @@
   .card li { margin-bottom: 0.45rem; }
   .card li strong { color: var(--text); font-weight: 600; }
 
+  .beta {
+    margin: 0 0 3rem;
+    padding: 1.6rem;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(242, 181, 68, 0.14), rgba(217, 83, 63, 0.08));
+    border: 1px solid var(--edge);
+  }
+  .beta h2 { color: var(--gold); }
+  .beta p { margin: 0 0 1rem; color: var(--muted); }
+  .beta ol { margin: 0 0 1.2rem; padding-left: 1.3rem; }
+  .beta li { margin: 0.35rem 0; }
+  .beta .links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .beta .btn {
+    display: inline-block; padding: 0.7rem 1.2rem; border-radius: 999px;
+    font-weight: 600; text-decoration: none;
+    background: var(--gold); color: #1b1408;
+  }
+  .beta .btn.ghost { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+
   .private {
     margin: 3rem 0 0;
     padding: 1.6rem;
@@ -133,7 +152,7 @@
   <div>
     <h1>GANYMEDE <span>Synth</span></h1>
     <p class="tagline">A synthesizer you learn by playing.</p>
-    <p class="platforms">iPad · Mac · Android phones and tablets</p>
+    <p class="platforms">iPhone · iPad · Mac · Android phones and tablets</p>
     <div class="soon">Coming soon to the App Store and Google Play</div>
   </div>
 </header>
@@ -141,6 +160,23 @@
 <div class="stripes" aria-hidden="true">
   <i style="background:var(--red)"></i><i style="background:var(--orange)"></i><i style="background:var(--gold)"></i><i style="background:var(--cream)"></i><i style="background:var(--blue)"></i>
 </div>
+
+<section class="beta" id="beta">
+  <h2>Help test it on Android</h2>
+  <p>Ganymede is in a closed beta on Google Play before its public release. It is free to
+  try, and your feedback shapes the first version.</p>
+  <ol>
+    <li><strong>Join the beta</strong> with the Google account you use on your phone or tablet.</li>
+    <li><strong>Install Ganymede</strong> from Google Play. It can take a few minutes to appear after you join.</li>
+    <li><strong>Play with it</strong> for a few minutes over the next two weeks, and
+      <a href="https://github.com/chrisphua/chrisphua.github.io/issues/new?title=Ganymede%20beta%3A%20">tell us what you think</a>:
+      what confused you, what you liked, what broke.</li>
+  </ol>
+  <div class="links">
+    <a class="btn" href="https://play.google.com/apps/testing/com.chrisphua.ganymede">1 · Join the beta</a>
+    <a class="btn ghost" href="https://play.google.com/store/apps/details?id=com.chrisphua.ganymede">2 · Install from Google Play</a>
+  </div>
+</section>
 
 <main class="grid">
   <section class="card">
@@ -167,7 +203,7 @@
     <h2 style="border-color:var(--blue)">Play it your way</h2>
     <ul>
       <li><strong>Any USB MIDI keyboard</strong> — with built-in support for the Akai MPK mini IV.</li>
-      <li><strong>On iPad and Mac, keeps playing in the background.</strong></li>
+      <li><strong>On iPhone, iPad and Mac, keeps playing in the background.</strong></li>
       <li><strong>Unlock</strong>, one purchase: <strong>save</strong> your own sounds, <strong>record</strong> what you play to a 24-bit WAV, and send <strong>MIDI out</strong> to other synths or your DAW.</li>
     </ul>
   </section>
