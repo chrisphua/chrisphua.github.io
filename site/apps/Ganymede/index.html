@@ -70,6 +70,11 @@
   h1 span { color: var(--gold); font-weight: 600; letter-spacing: 0.02em; }
   .tagline { font-size: 1.3rem; color: var(--orange); margin: 0.6rem 0 0; }
   .platforms { color: var(--muted); margin: 0.3rem 0 1.4rem; }
+  .get { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; }
+  .get .btn {
+    display: inline-block; padding: 0.6rem 1.15rem; border-radius: 999px;
+    font-weight: 600; text-decoration: none; background: var(--gold); color: #1b1408;
+  }
   .soon {
     display: inline-flex; align-items: center; gap: 0.6rem;
     padding: 0.55rem 1rem;
@@ -173,7 +178,10 @@
     <h1>GANYMEDE <span>Synth</span></h1>
     <p class="tagline">A synthesizer you learn by playing.</p>
     <p class="platforms">iPhone · iPad · Mac · Android phones and tablets</p>
-    <div class="soon">Coming soon to the App Store and Google Play</div>
+    <div class="get">
+      <a class="btn" href="https://apps.apple.com/app/id6826468510">Download on the Mac App Store</a>
+      <div class="soon">iPhone, iPad and Android coming soon</div>
+    </div>
   </div>
 </header>
 
