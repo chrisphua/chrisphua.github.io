@@ -1,0 +1,5 @@
+# Authorised sellers of ads in apps by this developer (https://iabtechlab.com/ads-txt/).
+# One Google AdMob publisher, pub-3368935744379533, for every app:
+#   MyPlaylist     ca-app-pub-3368935744379533~2634806738
+#   Ganymede Synth ca-app-pub-3368935744379533~8397492937 (iOS), ~4997303977 (Android)
+google.com, pub-3368935744379533, DIRECT, f08c47fec0942fa0
