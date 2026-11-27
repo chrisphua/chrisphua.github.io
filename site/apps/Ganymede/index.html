@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ganymede Synth — a synthesizer you learn by playing</title>
-<meta name="description" content="Ganymede Synth is a polyphonic synthesizer for iPad, Mac, and Android phones and tablets, made for people who have never touched a synth. Pick a sound, turn a knob, hear it. No account, no ads, no data collected.">
+<meta name="description" content="Ganymede Synth is a polyphonic synthesizer for iPhone, iPad, Mac, and Android phones and tablets, made for people who have never touched a synth. Pick a sound, turn a knob, hear it. Free, with four pianos to download and a worship pack.">
 <link rel="icon" href="favicon.png">
 <link rel="apple-touch-icon" href="icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ganymede Synth">
-<meta property="og:description" content="A synthesizer you learn by playing. For iPad, Mac, and Android phones and tablets.">
+<meta property="og:description" content="A synthesizer you learn by playing. Free on iPhone, iPad and Mac, in beta on Android.">
 <meta property="og:url" content="https://chrisphua.github.io/apps/Ganymede/">
 <meta property="og:image" content="https://chrisphua.github.io/apps/Ganymede/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -92,7 +92,9 @@
   .stripes i { flex: 1; }
 
   h2 { font-size: 1.05rem; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 1rem; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; }
+  /* Four cards: two by two, one column on a phone. */
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
   .card {
     background: var(--card);
     border: 1px solid var(--edge);
@@ -181,8 +183,8 @@
     <p class="tagline">A synthesizer you learn by playing.</p>
     <p class="platforms">iPhone · iPad · Mac · Android phones and tablets</p>
     <div class="get">
-      <a class="btn" href="https://apps.apple.com/app/id6826468510">Download on the Mac App Store</a>
-      <div class="soon">iPhone, iPad and Android coming soon</div>
+      <a class="btn" href="https://apps.apple.com/app/id6826468510">Download on the App Store</a>
+      <div class="soon">Free on iPhone, iPad and Mac · Android in beta, <a href="#beta">join below</a></div>
     </div>
   </div>
 </header>
@@ -192,11 +194,11 @@
 </div>
 
 <section class="beta" id="beta">
-  <h2>Android testers get the full version free</h2>
-  <p><strong>Help test Ganymede on Android and everything is unlocked for you</strong>: save your
-  own sounds, record to WAV and send MIDI out. Stay for the two-week beta and you keep the full
-  version free when it launches on Google Play. Already out on the
-  <a href="https://apps.apple.com/app/id6826468510">Mac App Store</a>.</p>
+  <h2>Help bring Ganymede to Android</h2>
+  <p><strong>Ganymede needs a few more Android testers before it can launch on Google
+  Play.</strong> Everything in it is free: every sound, the pianos, saving your own sounds,
+  recording and MIDI out. The beta shows test ads only. Already out on the
+  <a href="https://apps.apple.com/app/id6826468510">App Store</a> for iPhone, iPad and Mac.</p>
   <!-- VIDEO: drop shots/demo.mp4 here and uncomment.
   <video src="shots/demo.mp4" controls playsinline preload="metadata"
     style="width:100%;border-radius:12px;margin:0 0 1rem"></video> -->
@@ -221,25 +223,28 @@
   <h2>What you get</h2>
   <h3>iPad and Android tablets</h3>
   <div class="strip">
-    <a href="shots/tablet-1_easy.jpg"><img src="shots/tablet-1_easy.jpg" alt="Easy view: pick one of sixteen sounds and turn eight plain-named knobs" loading="lazy"></a>
-    <a href="shots/tablet-2_split.jpg"><img src="shots/tablet-2_split.jpg" alt="Two sounds at once: layered, or split across the keyboard" loading="lazy"></a>
-    <a href="shots/tablet-3_panel.jpg"><img src="shots/tablet-3_panel.jpg" alt="The full panel: oscillators, filter, envelopes, LFO and effects" loading="lazy"></a>
-    <a href="shots/tablet-4_seq.jpg"><img src="shots/tablet-4_seq.jpg" alt="The arpeggio and the 16-step sequencer" loading="lazy"></a>
-    <a href="shots/tablet-5_light.jpg"><img src="shots/tablet-5_light.jpg" alt="A light theme, played from a USB MIDI keyboard" loading="lazy"></a>
+    <a href="shots/tablet-1_easy.jpg"><img src="shots/tablet-1_easy.jpg" alt="Easy view: pick a sound, turn eight plain-named knobs, with the volume at hand" loading="lazy"></a>
+    <a href="shots/tablet-2_worship.jpg"><img src="shots/tablet-2_worship.jpg" alt="The worship pack: pads, swells, a drone and a shimmer reverb" loading="lazy"></a>
+    <a href="shots/tablet-3_split.jpg"><img src="shots/tablet-3_split.jpg" alt="Two sounds at once: layered, or split across the keyboard" loading="lazy"></a>
+    <a href="shots/tablet-4_panel.jpg"><img src="shots/tablet-4_panel.jpg" alt="The full panel: oscillators, filter, envelopes, LFO, effects and key modes" loading="lazy"></a>
+    <a href="shots/tablet-5_seq.jpg"><img src="shots/tablet-5_seq.jpg" alt="The arpeggio and the 16-step sequencer" loading="lazy"></a>
+    <a href="shots/tablet-6_light.jpg"><img src="shots/tablet-6_light.jpg" alt="A light theme, played from a USB MIDI keyboard" loading="lazy"></a>
   </div>
   <h3>iPhone</h3>
   <div class="strip phone">
-    <a href="shots/iphone-1_easy.jpg"><img src="shots/iphone-1_easy.jpg" alt="Easy view: pick one of sixteen sounds and turn eight plain-named knobs" loading="lazy"></a>
-    <a href="shots/iphone-2_split.jpg"><img src="shots/iphone-2_split.jpg" alt="Two sounds at once: layered, or split across the keyboard" loading="lazy"></a>
-    <a href="shots/iphone-3_panel.jpg"><img src="shots/iphone-3_panel.jpg" alt="The full panel: oscillators, filter, envelopes, LFO and effects" loading="lazy"></a>
-    <a href="shots/iphone-5_light.jpg"><img src="shots/iphone-5_light.jpg" alt="A light theme, played from a USB MIDI keyboard" loading="lazy"></a>
+    <a href="shots/iphone-1_easy.jpg"><img src="shots/iphone-1_easy.jpg" alt="Easy view: pick a sound, turn eight plain-named knobs, with the volume at hand" loading="lazy"></a>
+    <a href="shots/iphone-2_worship.jpg"><img src="shots/iphone-2_worship.jpg" alt="The worship pack: pads, swells, a drone and a shimmer reverb" loading="lazy"></a>
+    <a href="shots/iphone-3_split.jpg"><img src="shots/iphone-3_split.jpg" alt="Two sounds at once: layered, or split across the keyboard" loading="lazy"></a>
+    <a href="shots/iphone-4_panel.jpg"><img src="shots/iphone-4_panel.jpg" alt="The full panel: oscillators, filter, envelopes, LFO, effects and key modes" loading="lazy"></a>
+    <a href="shots/iphone-6_light.jpg"><img src="shots/iphone-6_light.jpg" alt="A light theme, played from a USB MIDI keyboard" loading="lazy"></a>
   </div>
   <h3>Android phones</h3>
   <div class="strip phone">
-    <a href="shots/android-1_easy.jpg"><img src="shots/android-1_easy.jpg" alt="Easy view: pick one of sixteen sounds and turn eight plain-named knobs" loading="lazy"></a>
-    <a href="shots/android-2_split.jpg"><img src="shots/android-2_split.jpg" alt="Two sounds at once: layered, or split across the keyboard" loading="lazy"></a>
-    <a href="shots/android-3_panel.jpg"><img src="shots/android-3_panel.jpg" alt="The full panel: oscillators, filter, envelopes, LFO and effects" loading="lazy"></a>
-    <a href="shots/android-5_light.jpg"><img src="shots/android-5_light.jpg" alt="A light theme, played from a USB MIDI keyboard" loading="lazy"></a>
+    <a href="shots/android-1_easy.jpg"><img src="shots/android-1_easy.jpg" alt="Easy view: pick a sound, turn eight plain-named knobs, with the volume at hand" loading="lazy"></a>
+    <a href="shots/android-2_worship.jpg"><img src="shots/android-2_worship.jpg" alt="The worship pack: pads, swells, a drone and a shimmer reverb" loading="lazy"></a>
+    <a href="shots/android-3_split.jpg"><img src="shots/android-3_split.jpg" alt="Two sounds at once: layered, or split across the keyboard" loading="lazy"></a>
+    <a href="shots/android-4_panel.jpg"><img src="shots/android-4_panel.jpg" alt="The full panel: oscillators, filter, envelopes, LFO, effects and key modes" loading="lazy"></a>
+    <a href="shots/android-6_light.jpg"><img src="shots/android-6_light.jpg" alt="A light theme, played from a USB MIDI keyboard" loading="lazy"></a>
   </div>
 </section>
 
@@ -247,10 +252,19 @@
   <section class="card">
     <h2 style="border-color:var(--orange)">Start in seconds</h2>
     <ul>
-      <li><strong>Sixteen ready-made sounds</strong> — brass, strings, pads, leads, basses, keys and bells.</li>
+      <li><strong>Over thirty ready-made sounds</strong> — brass, strings, pads, leads, basses, keys and bells, all in one list you arrange yourself.</li>
       <li><strong>Eight big knobs with plain names:</strong> Brightness, Bite, Sweep, Fade in, Fade out, Thickness, Space, Echo.</li>
       <li><strong>See what you hear</strong> — live pictures of the volume and the filter as you turn.</li>
       <li><strong>Surprise me</strong> rolls a brand-new sound that always stays playable.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2 style="border-color:var(--red)">Pianos and worship</h2>
+    <ul>
+      <li><strong>Four pianos, free to download</strong> — a grand, a studio grand, an upright, and Stage grand, voiced to cut through a band.</li>
+      <li><strong>A worship pack</strong> — warm pads, slow swells, an ambient drone to hold under a set, choir and strings.</li>
+      <li><strong>Shimmer reverb</strong> — the glowing halo an octave above, behind worship pads.</li>
     </ul>
   </section>
 
@@ -269,15 +283,19 @@
     <ul>
       <li><strong>Any USB MIDI keyboard</strong> — with built-in support for the Akai MPK mini IV.</li>
       <li><strong>On iPhone, iPad and Mac, keeps playing in the background.</strong></li>
-      <li><strong>Unlock</strong>, one purchase: <strong>save</strong> your own sounds, <strong>record</strong> what you play to a 24-bit WAV, and send <strong>MIDI out</strong> to other synths or your DAW.</li>
+      <li><strong>Everything free:</strong> <strong>save</strong> your own sounds, <strong>record</strong> what you play to a 24-bit WAV, and send <strong>MIDI out</strong> to other synths or your DAW.</li>
+      <li><strong>One small banner</strong> on iPhone, iPad and Android; one purchase, <strong>Remove Ads</strong>, takes it away for good. The Mac has no ads, and an optional tip if you'd like to support Ganymede.</li>
     </ul>
   </section>
 </main>
 
 <section class="private">
-  <h2>Private by design</h2>
-  <p>No account, no ads, no tracking. Ganymede collects nothing, and goes online only when you
-  buy or restore the Unlock. <a href="privacy.html">Read the privacy policy</a>.</p>
+  <h2>Privacy</h2>
+  <p>No account. On iPhone, iPad and Android the banner comes from Google AdMob, which asks for
+  your consent where the law requires it and uses an advertising identifier only if you allow
+  it; Remove Ads turns it off. Apart from that ad, Ganymede collects nothing, and the Mac app
+  collects nothing at all. Pianos download from GitHub the first time you play them.
+  <a href="privacy.html">Read the privacy policy</a>.</p>
 </section>
 
 <footer>
